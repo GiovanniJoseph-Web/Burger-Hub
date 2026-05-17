@@ -1,0 +1,329 @@
+:root {
+    --brand-orange: #ff9100;     
+    --brand-dark-red: #6d1b0b;    
+    --brand-charcoal: #1e2229;     
+    --brand-light-bg: #f8f9fa;   
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-orange { color: var(--brand-orange) !important; }
+.text-dark-red { color: var(--brand-dark-red) !important; }
+.bg-orange-light { background-color: rgba(255, 145, 0, 0.1) !important; }
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--brand-dark-red);
+}
+
+.max-w-600 {
+    max-width: 600px;
+}
+
+/* -----------------------------------------------------------
+   2. Navbar Styles
+----------------------------------------------------------- */
+.brand-logo {
+    color: var(--brand-dark-red) !important;
+}
+.nav-link {
+    font-weight: 500;
+    color: #555 !important;
+    transition: color 0.3s ease;
+}
+.nav-link.active, .nav-link:hover {
+    color: var(--brand-orange) !important;
+}
+.btn-contact {
+    background-color: var(--brand-dark-red);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+.btn-contact:hover {
+    background-color: #4a1204;
+    transform: translateY(-1px);
+    color: #ffffff !important;
+}
+
+/* -----------------------------------------------------------
+   3. Hero Section
+----------------------------------------------------------- */
+.hero-section {
+    min-height: calc(100vh - 84px);
+    display: flex; 
+    align-items: center;      
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hero-title {
+    color: var(--brand-dark-red);
+    line-height: 1.2;
+    font-weight: 800;
+}
+.highlight-text {
+    color: var(--brand-orange);
+}
+.btn-primary-custom {
+    background-color: var(--brand-orange);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-primary-custom:hover {
+    background-color: #e07d00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 145, 0, 0.3);
+    color: white;
+}
+
+.hero-image-grid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.main-img-box {
+    width: 90%;
+    z-index: 2;
+}
+.main-img-box img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.sub-img-box {
+    position: absolute;
+    width: 45%;
+    bottom: -10px;
+    left: -20px;
+    z-index: 3;
+    border: 6px solid #ffffff;
+}
+.sub-img-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* -----------------------------------------------------------
+   4. Categories & Cards
+----------------------------------------------------------- */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px !important;
+    background: #ffffff;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+.card-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-card .card-title {
+    color: var(--brand-dark-red);
+}
+
+/* -----------------------------------------------------------
+   5. Why Us (Features)
+----------------------------------------------------------- */
+.feature-box {
+    transition: all 0.3s ease;
+}
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+/* -----------------------------------------------------------
+   6. Gallery Section
+----------------------------------------------------------- */
+.gallery-card {
+    position: relative;
+    cursor: pointer;
+    height: 220px;
+    overflow: hidden;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+/* -----------------------------------------------------------
+   7. Footer Section Styles
+----------------------------------------------------------- */
+.footer-heading {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links li {
+    color: #b0b4bc !important;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon {
+    color: #e0e0e0 !important; 
+    width: 20px;
+    text-align: center;
+}
+
+.social-circle-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #1f2229;
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-circle-btn:hover {
+    background-color: #ffffff;
+    color: #0b0c10 !important; 
+    transform: translateY(-3px);
+}
+
+.footer-copy p {
+    color: #717785 !important;
+    font-size: 0.85rem;
+}
+
+/* ===========================================================
+   8. الـ Dark Mode 
+=========================================================== */
+html[data-bs-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+html[data-bs-theme="dark"] .bg-white,
+html[data-bs-theme="dark"] .navbar,
+html[data-bs-theme="dark"] .hero-section,
+html[data-bs-theme="dark"] .categories-section,
+html[data-bs-theme="dark"] .gallery-section,
+html[data-bs-theme="dark"] .card,
+html[data-bs-theme="dark"] .feature-box,
+html[data-bs-theme="dark"] .about-badge {
+    background-color: #1e1e1e !important;
+    color: #f8f9fa !important;
+}
+
+html[data-bs-theme="dark"] .bg-light,
+html[data-bs-theme="dark"] .about-section,
+html[data-bs-theme="dark"] .why-us-section {
+    background-color: #121212 !important;
+}
+
+html[data-bs-theme="dark"] .section-title,
+html[data-bs-theme="dark"] .card-title-toggle,
+html[data-bs-theme="dark"] .feature-title-toggle,
+html[data-bs-theme="dark"] .brand-text-toggle {
+    color: var(--brand-orange) !important;
+}
+
+html[data-bs-theme="dark"] .badge-icon-toggle {
+    color: var(--brand-orange) !important;
+}
+
+html[data-bs-theme="dark"] .text-muted {
+    color: #a0a0a0 !important;
+}
+
+html[data-bs-theme="dark"] .nav-link {
+    color: #cccccc !important;
+}
+html[data-bs-theme="dark"] .nav-link.active,
+html[data-bs-theme="dark"] .nav-link:hover {
+    color: var(--brand-orange) !important;
+}
+
+html[data-bs-theme="dark"] .sub-img-box {
+    border-color: #1e1e1e !important;
+}
+
+/* -----------------------------------------------------------
+   9. Scroll Up Button Styles
+----------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--brand-orange);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+}
+
+.btn-scroll-top:hover {
+    background-color: var(--brand-dark-red);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.btn-scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+html[data-bs-theme="dark"] .btn-scroll-top:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
